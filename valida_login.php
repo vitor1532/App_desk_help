@@ -36,7 +36,8 @@
 	if($usuario_autenticado) {
 		echo 'Usuário autenticado.';
 	} else {
-		echo 'Erro! Usuário ou senha inválido(s)!';
+		//força o redirecionamento
+		header('Location: index.php?login=erro');
 	}
 
 	/*
