@@ -39,12 +39,21 @@
                 <div class="form-group">
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
-                
+
                 <? if (isset($_GET['login']) && $_GET['login'] == 'erro') {
                 ?>
 
                 <div class="text-danger">
                   Usuário ou senha Inválido(s)
+                </div>
+
+                <? } ?>
+
+                <? if (isset($_GET['login']) && $_GET['login'] == 'erro2') {
+                ?>
+
+                <div class="text-danger">
+                  Faça login antes de acessar as páginas protegidas.
                 </div>
 
                 <? } ?>
