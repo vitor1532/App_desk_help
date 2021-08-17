@@ -62,7 +62,7 @@
   </body>
 =======
 <?php
-
+  //abrir sessão
   session_start();
 
   echo $SESSION['autenticado'];
