@@ -40,6 +40,8 @@
 		echo 'Usuário autenticado.';
 		//caso autenticado, criar um indice na variavel de sessão
 		$_SESSION['autenticado'] = 'SIM';
+		//redireciona para home
+		header('Location: home.php');
 	} else {
 		$_SESSION['autenticado'] = 'NAO';
 		//força o redirecionamento
