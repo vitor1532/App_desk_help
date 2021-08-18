@@ -45,7 +45,7 @@
 		//força o redirecionamento
 		header('Location: index.php?login=erro');
 	}
-	//mudança1
+	//mudança aleatoria deletar esse comentario depois
 	/*
 	print_r($_POST);
 	echo '<br>';
