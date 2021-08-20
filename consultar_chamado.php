@@ -1,5 +1,8 @@
 <? require_once "validador_acesso.php" ?>
 <?php
+
+  //arr de chamados
+  $chamados =[]
     
   //abrir o arquivo.txt
   $arquivo = fopen('arquivo.txt', 'r');
@@ -8,7 +11,8 @@
   while(!feof($arquivo)) {//eof = end of file
       //testa pelo fim de um arquivo
     //linhas
-    fgets($arquivo);//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
+    $registro = fgets($arquivo);//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
+    $chamados[] = $registro;//inserir registros recuperados no array chamado
 
   }
 
