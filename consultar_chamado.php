@@ -68,6 +68,15 @@
 
                   $chamado_dados = explode('#', $chamado); // explode as informações que são retornados em arrays 
 
+                  //identificar o perfil do user
+                  if($_SESSION['perfil_id'] == 2) {
+                    //só exibir o chamado se foi criado pelo usuario
+                    if($_SESSION['id'] != $chamado_dados[0]) {
+                      continue;                      
+                    }
+
+                  }
+
                   if(count($chamado_dados) < 3) {//verifica se os arrays contém todos os dados
                     continue;
                   }
