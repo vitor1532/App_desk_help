@@ -7,6 +7,8 @@
 	$usuario_autenticado = false;
 	//variavel de id do usuario
 	$usuario_id = null;
+	//array dos perfis
+	$perfis = [1 => 'Administrativo', 2 => 'Usuário'];
 
 	//usuarios do sistema
 	$usuarios_app = [
