@@ -19,9 +19,6 @@
     } else {
       continue;
     }
-
-
-
   }
 
   //fechar o arquivo aberto
