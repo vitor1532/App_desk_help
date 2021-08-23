@@ -3,7 +3,6 @@
 
   //arr de chamados
   $chamados =[];
-    
   //abrir o arquivo.txt
   $arquivo = fopen('arquivo.txt', 'r');
 
@@ -11,8 +10,18 @@
   while(!feof($arquivo)) {//eof = end of file
       //testa pelo fim de um arquivo
     //linhas
-    $registro = fgets($arquivo);//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
-    $chamados[] = $registro;//inserir registros recuperados no array chamado
+    $registro =  explode('#', fgets($arquivo));//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
+    print_r($registro);
+
+    if( $_SESSION['perfil_id'] == 2 && $registro[0] == $_SESSION['id'] || $_SESSION['perfil_id'] == 1) {
+
+      $chamados[] = $registro;//inserir registros recuperados no array chamado
+
+    } else {
+      continue;
+    }
+
+
 
   }
 
@@ -66,8 +75,8 @@
 
                 <?php
 
-                  $chamado_dados = explode('#', $chamado); // explode as informações que são retornados em arrays 
-
+                  //$chamado_dados = explode('#', $chamado); // explode as informações que são retornados em arrays 
+                  /*
                   //identificar o perfil do user
                   if($_SESSION['perfil_id'] == 2) {
                     //só exibir o chamado se foi criado pelo usuario
@@ -76,8 +85,8 @@
                     }
 
                   }
-
-                  if(count($chamado_dados) < 3) {//verifica se os arrays contém todos os dados
+                  */
+                  if(count($chamado) < 3) {//verifica se os arrays contém todos os dados
                     continue;
                   }
 
@@ -85,9 +94,9 @@
               
                 <div class="card mb-3 bg-light">
                   <div class="card-body">
-                    <h5 class="card-title"><?= $chamado_dados[1]; ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2]; ?></h6>
-                    <p class="card-text"><?= $chamado_dados[3]; ?></p>
+                    <h5 class="card-title"><?= $chamado[1]; ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado[2]; ?></h6>
+                    <p class="card-text"><?= $chamado[3]; ?></p>
 
                   </div>
                 </div>
