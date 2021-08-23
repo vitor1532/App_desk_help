@@ -45,6 +45,8 @@
 		echo 'Usuário autenticado.';
 		//caso autenticado, criar um indice na variavel de sessão
 		$_SESSION['autenticado'] = 'SIM';
+		//relacionando a id do usuario com a sessão
+		$_SESSION['id'] = $usuario_id;
 		//redireciona para home
 		header('Location: home.php');
 	} else {
