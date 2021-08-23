@@ -12,10 +12,10 @@
 
 	//usuarios do sistema
 	$usuarios_app = [
-		array('id' => 1 ,'email' => 'adm@teste.com', 'senha' => '123456'),
-		array('id' => 2 ,'email' => 'user@teste.com', 'senha' => 'abcd'),
-		array('id' => 3 ,'email' => 'vitor@teste.com', 'senha' => '456789'),
-		array('id' => 4 ,'email' => 'jose@teste.com', 'senha' => '1234')
+		array('id' => 1 ,'email' => 'adm@teste.com', 'senha' => '123456', 'perfil_id' => 1),
+		array('id' => 2 ,'email' => 'user@teste.com', 'senha' => 'abcd', 'perfil_id' => 1),
+		array('id' => 3 ,'email' => 'vitor@teste.com', 'senha' => '456789', 'perfil_id' => 2),
+		array('id' => 4 ,'email' => 'jose@teste.com', 'senha' => '1234', 'perfil_id' => 2)
 	];
 
 	/*
