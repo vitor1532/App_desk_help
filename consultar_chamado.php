@@ -11,7 +11,6 @@
       //testa pelo fim de um arquivo
     //linhas
     $registro =  explode('#', fgets($arquivo));//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
-    print_r($registro);
 
     if( $_SESSION['perfil_id'] == 2 && $registro[0] == $_SESSION['id'] || $_SESSION['perfil_id'] == 1) {
 
