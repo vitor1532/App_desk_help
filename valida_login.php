@@ -8,9 +8,10 @@
 
 	//usuarios do sistema
 	$usuarios_app = [
-		array('email' => 'adm@teste.com', 'senha' => '123456'),
-		array('email' => 'user@teste.com', 'senha' => 'abcd'),
-		array('email' => 'vitor@teste.com', 'senha' => '456789'),
+		array('id' => 1 ,'email' => 'adm@teste.com', 'senha' => '123456'),
+		array('id' => 2 ,'email' => 'user@teste.com', 'senha' => 'abcd'),
+		array('id' => 3 ,'email' => 'vitor@teste.com', 'senha' => '456789'),
+		array('id' => 4 ,'email' => 'jose@teste.com', 'senha' => '1234')
 	];
 
 	/*
