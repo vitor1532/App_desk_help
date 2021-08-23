@@ -1,11 +1,9 @@
 <?php 
 
-	echo '<pre>';
-	print_r($_POST);
-	echo '</pre>';
+	session_start();
 
 	//defnir o que será escrito no arquivo e substituir o caracter de separação por outro para evitar conflitos
-	$texto = implode('#', str_replace('#', '-', $_POST)) . PHP_EOL;//PHP_EOL -> função END OF LINE
+	$texto = $_SESSION['id'] . '#' . implode('#', str_replace('#', '-', $_POST)) . PHP_EOL;//PHP_EOL -> função END OF LINE
 
 	//abrir o arquivo
 	$arquivo = fopen('arquivo.txt', 'a');// espera dois parametros, o nome do arquivo e se queremos abrir, ler e outras funções
