@@ -52,6 +52,7 @@
 		$_SESSION['autenticado'] = 'SIM';
 		//relacionando a id do usuario com a sessão
 		$_SESSION['id'] = $usuario_id;
+		$_SESSION['perfil_id'] = $usuario_perfil_id;
 		//redireciona para home
 		header('Location: home.php');
 	} else {
