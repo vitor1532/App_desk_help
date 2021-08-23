@@ -5,6 +5,8 @@
 	
 	//variavel que verifica se a autenticação foi realizada
 	$usuario_autenticado = false;
+	//variavel de id do usuario
+	$usuario_id = null;
 
 	//usuarios do sistema
 	$usuarios_app = [
@@ -32,6 +34,8 @@
 		if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
 
 			$usuario_autenticado = true;
+			//seta a variavel de id do usuario para cada $user
+			$usuario_id = $user['id'];
 
 		}
 
