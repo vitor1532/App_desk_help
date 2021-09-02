@@ -11,12 +11,12 @@
       //testa pelo fim de um arquivo
     //linhas
     $registro =  explode('#', fgets($arquivo));//com base no arquivo aberto e na posição do 'cursor', le a linha até encontrar o final da linha
-
+    //se o id de perfil for 2, ou seja, o perfil "usuario" e o id no registro do arquivo for igual ao id da sessão, mostrar apenas o chamado do usuário, se o id de perfil for 1, ou seja, 'administrativo', mostrar todos os chamados
     if( $_SESSION['perfil_id'] == 2 && $registro[0] == $_SESSION['id'] || $_SESSION['perfil_id'] == 1) {
 
       $chamados[] = $registro;//inserir registros recuperados no array chamado
 
-    } else {
+    } else {//se as informações não baterem, ignore e continue o processo while
       continue;
     }
   }
