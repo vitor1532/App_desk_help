@@ -4,7 +4,7 @@
   //arr de chamados
   $chamados =[];
   //abrir o arquivo.txt
-  $arquivo = fopen('arquivo.txt', 'r');
+  $arquivo = fopen('../../app_help_desk/arquivo.txt', 'r');
 
   //percorrer o arquivo enquanto houver registros(linhas) a seren recuperados
   while(!feof($arquivo)) {//eof = end of file

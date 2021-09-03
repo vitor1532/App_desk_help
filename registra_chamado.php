@@ -6,7 +6,7 @@
 	$texto = $_SESSION['id'] . '#' . implode('#', str_replace('#', '-', $_POST)) . PHP_EOL;//PHP_EOL -> função END OF LINE
 
 	//abrir o arquivo
-	$arquivo = fopen('arquivo.txt', 'a');// espera dois parametros, o nome do arquivo e se queremos abrir, ler e outras funções
+	$arquivo = fopen('../../app_help_desk/arquivo.txt', 'a');// espera dois parametros, o nome do arquivo e se queremos abrir, ler e outras funções
 
 	//escrever no arquivo aberto
 	fwrite($arquivo, $texto);
