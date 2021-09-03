@@ -1,5 +1,0 @@
-1#chamado adm#Software#teste teste teste
-4#Chamado Jose#Impressora#teste jose
-4#aa#Impressora#aaa aa
-1#teste adm#Impressora#açolsihjnaojsik
-4#treste jose#Criação Usuário#aaaa
